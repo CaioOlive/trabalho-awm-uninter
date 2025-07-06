@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caio Oliveira - CV</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FEFDEF;
+            /* retirando as margens e padding do arquivo inteiro, e colocando uma cor base */
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            /* criando um grid de 12 partições o qual será a base do site */
+        }
+        header {
+            background-color: gray;
+            /* cor de fundo cinza no header */
+        }
+        .header {
+            grid-column: 5 / 9;
+            display: grid;
+            /* estabelecendo que o header vai equipar apenas 4 colunas, que serão as centrais e que dentro do header haverá uma nova divisão em grid */
+        }
+        .container-header {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            /* estabelecendo um grid de 4 colunas */
+        }
+        header div {
+            grid-column: span 4;
+            display: grid;
+            /* garantindo que as divs que são filhas do header irão ocupar todas as 4 colunas que formam o header e criando outro grid */
+        }
+        .img-header {
+            grid-column: 2 / 4;
+            width: 100%;
+            background-color: #FEFDEF;
+            border-radius: 5%;
+            /* estabelecendo que a imagem irá ocupar as duas colunas centrais, que a imagem irá ocupar sempre 100% dessas duas colunas, a cor de fundo e colocando uma borda arredondada */
+        }
+        header a {
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            margin-top: 15px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            /* estabelecendo que os a (links) que estão dentro do header terão texto centralizado, sem decoração, a cor do texto será preta, margem de 15 px em cima e mais um 5px para cima e para baixo */
+        }
+        header a:hover{
+            color: white;
+            background-color: black;
+            /* quando passar o mouse por cima dos a (links) que estão dentro do header, a cor de fundo virará preto e a cor do texto virará branco */
+        }
+        .i {
+            background-color: #2BED4D;
+            /* do i ao iv, estabelecendo cores de fundo */
+        }
+        .ii {
+            background-color: #2BEDD1;
+        }
+        .iii {
+            background-color: #52ED2B;
+        }
+        .iv {
+            background-color: #2BCAED;
+        }
+        .corpo {
+            grid-column: 3 / 11;
+            /* estabelecendo que os textos de fato ocuparão apenas 8 das 12 colunas no grid */
+        }
+        .titulo {
+            text-align: center;
+            font-size: 1.5rem;
+            /* titulos serão alinhados ao centro e terão 50% a mais de tamabho */
+        }
+        .subtitulo {
+            font-size: 1.25rem;
+            /* subtitulos terão 25% a mais de tamanho */
+        }
+        .formulario {
+            grid-column: 4 / 10;
+            text-align: center;
+            background-color: white;
+            /* o formulário ocupará apenas 6 das 12 colunas, o texto nele será centralizado e com fundo branco */
+        }
+        ul {
+            list-style-type: circle;
+            /* as listas não ordenadas terão circulos vazios como decoração */
+        }
+        #portfolio {
+            margin-bottom: 25px;
+            /* a seção de portfolio terá uma margem extra de 25 px */
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="container"> <!-- definindo que é o header e encapsulando o header, definindo que será o grid de 12 -->
+        <div class="container-header header">
+            <div class="container-header">
+                <img src="./imagens/Prancheta 112.png" class="img-header">
+            </div>
+            <a href="#sobre" class="i">Sobre</a><!-- os links levarão a posição na página que cada seção começa -->
+            <a href="#formacao" class="ii">Formação</a>
+            <a href="#portfolio" class="iii">Portfólio</a>
+            <a href="#contato" class="iv">Contato</a>
+        </div>
+    </header>
+
+    <div id="sobre" class="container"><!-- definindo que é a seção sobre mim e encapsulando-a, definindo que será o grid de 12 -->
+        <div class="corpo">
+            <p class="titulo">SOBRE MIM</p>
+            <p>Tenho 24 anos, e sou estudante de Engenharia de Software e designer visual.<br>Possuo conhecimento em Python, HTML, CSS, e básico de JavaScript, Figma.<br>Possuo também conhecimento no pacote Adobe, em especial nas ferramentas de criação Illustrator, InDesign, Photoshop, Premiere e After Effects, pacote Office, Blender e 3ds max.<br>Sou uma pessoa criativa, que gosta de trabalhar em equipe, calma e paciente. Aprendo rápido e estou sempre aberto para novos conhecimentos.<br>Meus hobbies incluem tocar piano, jogar badminton, assistir séries e filmes e jogar videogames.</p>
+        </div>
+    </div>
+
+    <div id="formacao" class="container" style="background-color: #F0FBFF;"><!-- alem de definir que é a formacao e encapsulando-a e definindo que será o grid de 12, também está mudando a cor de fundo dessa seção (fiz pela tag style para mostrar uma alternativa) -->
+        <div class="corpo">
+            <p class="titulo">FORMAÇÃO</p>
+            <p class="subtitulo">Formações</p>
+            <ul> <!-- criando uma lista não ordenada para descrever as formações e depois os idiomas -->
+                <li style="margin-bottom: 10px;"><!-- colocando uma margem embaixo para dar um espaço de respiro -->Tecnólogo em Produção Multimídia<br>Universidade Santa Cecília<br>Janeiro de 2021 - Dezembro de 2022</li>
+                <li>Bacharelado em Engenharia de Software<br>UNINTER<br>Junho de 2024 - Julho de 2028</li>
+            </ul>
+            <p class="subtitulo">Idiomas</p>
+            <ul>
+                <li>Português - Nativo</li>
+                <li>Inglês - Avançado</li>
+                <li>Japonês - Básico</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="portfolio" class="container" style="background-color: #FFF0F4;"><!-- alem de definir que é o portfolio e encapsulando-o e definindo que será o grid de 12, também está mudando a cor de fundo dessa seção -->
+        <div class="corpo">
+            <p class="titulo">PORTFÓLIO</p>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1L4eC9HzvL5EOWcYeZWT6z3LFEZ6K7Qn0/view" target="_blank"><!-- direcionando ao link e também fazendo com que o link abra em uma nova aba -->Manual de Identidade Visual<!-- trabalho realizado por mim em uma prévia faculdade --></a></li>
+                <li><a href="https://caioolive.github.io/design-agency/" target="_blank">Exercício de site simulando uma agência de Design</a></li> <!-- Esse exercício e os próximos 2 fazem parte do cursoThe Complete Full-Stack Web Development Bootcamp da Angela Yu na Udemy que faço -->
+                <li><a href="https://caioolive.github.io/mondrian-project/" target="_blank">Exercício de site replicando uma pintura no estilo de Mondrian com grid</a></li>
+                <li><a href="https://caioolive.github.io/pricing-table/" target="_blank">Exercício de site simulando 3 ofertas de serviço</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="contato" class="container"><!-- definindo que é a secao de contato e encapsulando-a e definindo que será o grid de 12 -->
+        <div class="formulario">
+            <form><!-- criando um formulario -->
+                <fieldset><!-- criando a bordinha ao redor do formulario -->
+                <p class="titulo">CONTATO</p>
+                        <label for="nome">Nome:</label><!-- criando cada item do formulario -->
+                        <input type="text" name="nome" size="50" maxlength="50">
+                        <br><br>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" size="50" maxlength="50">
+                        <br><br>
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea rows="3" cols="48"></textarea>
+                        <br><br>
+                        <input type="button" name="enviar" value="Enviar"><!-- criando o butao que enviaria essas informacoes -->
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
